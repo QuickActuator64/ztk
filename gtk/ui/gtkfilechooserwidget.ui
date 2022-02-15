@@ -193,7 +193,7 @@
                                   <object class="GtkTreeView" id="browse_files_tree_view">
                                     <property name="visible">1</property>
                                     <property name="has-tooltip">1</property>
-                                    <property name="enable-search">0</property>
+                                    <property name="enable-search">1</property>
                                     <child internal-child="accessible">
                                       <object class="AtkObject" id="browse_files_tree_view-atkobject">
                                         <property name="AtkObject::accessible-name" translatable="yes">Files</property>

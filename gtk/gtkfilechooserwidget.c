@@ -2493,13 +2493,13 @@ file_list_set_sort_column_ids (GtkFileChooserWidget *impl)
 {
   GtkFileChooserWidgetPrivate *priv = impl->priv;
 
-  gtk_tree_view_set_search_column (GTK_TREE_VIEW (priv->browse_files_tree_view), -1);
-
   gtk_tree_view_column_set_sort_column_id (priv->list_name_column, MODEL_COL_NAME);
   gtk_tree_view_column_set_sort_column_id (priv->list_time_column, MODEL_COL_TIME);
   gtk_tree_view_column_set_sort_column_id (priv->list_size_column, MODEL_COL_SIZE);
   gtk_tree_view_column_set_sort_column_id (priv->list_type_column, MODEL_COL_TYPE);
   gtk_tree_view_column_set_sort_column_id (priv->list_location_column, MODEL_COL_LOCATION_TEXT);
+
+  gtk_tree_view_set_search_column (GTK_TREE_VIEW (priv->browse_files_tree_view), MODEL_COL_NAME);
 }
 
 static gboolean
@@ -3149,6 +3149,7 @@ operation_mode_stop (GtkFileChooserWidget *impl,
       search_stop_searching (impl, TRUE);
       search_clear_model (impl, TRUE);
       gtk_widget_hide (impl->priv->remote_warning_bar);
+      gtk_tree_view_set_enable_search (GTK_TREE_VIEW (impl->priv->browse_files_tree_view), TRUE);
     }
 }
 
@@ -3201,6 +3202,7 @@ operation_mode_set_search (GtkFileChooserWidget *impl)
   location_bar_update (impl);
   search_setup_widgets (impl);
   gtk_widget_set_sensitive (priv->filter_combo, FALSE);
+  gtk_tree_view_set_enable_search (GTK_TREE_VIEW (priv->browse_files_tree_view), FALSE);
 }
 
 static void

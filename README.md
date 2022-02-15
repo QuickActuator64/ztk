@@ -9,7 +9,7 @@ ZTK is a fork from GTK 3.24 that aims to keep the structure of GTK+ 3 alive, to 
 Future goals
 ------------
 
-- [ ] Reimplement type-ahead into the file chooser
+- [x] Reimplement type-ahead into the file chooser
 - [ ] Reimplement the color wheel as a color-chooser (as found in older versions of GTK)
 - [ ] Make compatible with GTK 4 applications
 - [ ] Make compatible with libhandy-1.0
