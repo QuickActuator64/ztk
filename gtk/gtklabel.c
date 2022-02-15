@@ -4231,8 +4231,8 @@ gtk_label_style_updated (GtkWidget *widget)
 
   if (change == NULL || gtk_css_style_change_affects (change, GTK_CSS_AFFECTS_FONT))
     {
-      gtk_label_clear_layout (GTK_LABEL (widget));
-      gtk_widget_queue_resize (label);
+      gtk_label_clear_layout (label);
+      gtk_widget_queue_resize (widget);
     }
 
   if (change == NULL || gtk_css_style_change_affects (change, GTK_CSS_AFFECTS_TEXT_ATTRS) ||

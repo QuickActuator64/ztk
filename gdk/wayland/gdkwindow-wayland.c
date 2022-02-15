@@ -2119,8 +2119,8 @@ gdk_wayland_window_handle_configure_popup (GdkWindow *window,
   GdkWindowImplWayland *impl = GDK_WINDOW_IMPL_WAYLAND (window->impl);
   GdkRectangle flipped_rect;
   GdkRectangle final_rect;
-  gboolean flipped_x;
-  gboolean flipped_y;
+  gboolean flipped_x = 0;
+  gboolean flipped_y = 0;
 
   g_return_if_fail (impl->transient_for);
 
