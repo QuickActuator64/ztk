@@ -4,8 +4,6 @@ gtk_deprecated_h_sources = 		\
 	deprecated/gtkactiongroup.h	\
 	deprecated/gtkalignment.h	\
 	deprecated/gtkarrow.h		\
-	deprecated/gtkcolorsel.h	\
-	deprecated/gtkcolorseldialog.h	\
 	deprecated/gtkfontsel.h		\
 	deprecated/gtkgradient.h	\
 	deprecated/gtkhandlebox.h	\
@@ -15,7 +13,6 @@ gtk_deprecated_h_sources = 		\
 	deprecated/gtkhscale.h		\
 	deprecated/gtkhscrollbar.h	\
 	deprecated/gtkhseparator.h	\
-	deprecated/gtkhsv.h		\
 	deprecated/gtkiconfactory.h	\
 	deprecated/gtkimagemenuitem.h	\
 	deprecated/gtkmisc.h		\
@@ -53,8 +50,6 @@ deprecated_c_sources = 			\
 	deprecated/gtkactiongroup.c	\
 	deprecated/gtkalignment.c	\
 	deprecated/gtkarrow.c		\
-	deprecated/gtkcolorsel.c	\
-	deprecated/gtkcolorseldialog.c	\
 	deprecated/gtkfontsel.c		\
 	deprecated/gtkgradient.c	\
 	deprecated/gtkhandlebox.c	\
@@ -64,7 +59,6 @@ deprecated_c_sources = 			\
 	deprecated/gtkhscale.c		\
 	deprecated/gtkhscrollbar.c	\
 	deprecated/gtkhseparator.c	\
-	deprecated/gtkhsv.c		\
 	deprecated/gtkiconfactory.c	\
 	deprecated/gtkimagemenuitem.c	\
 	deprecated/gtkmisc.c		\

@@ -275,6 +275,7 @@ gtk_private_h_sources =		\
 	gtkgesturezoomprivate.h	\
 	gtkheaderbarprivate.h	\
 	gtkhslaprivate.h	\
+	gtkhsv.h		\
 	gtkiconcache.h		\
 	gtkiconhelperprivate.h  \
 	gtkiconprivate.h	\
@@ -456,6 +457,8 @@ gtk_base_c_sources = 		\
 	gtkcolorpickershell.c	\
 	gtkcolorplane.c		\
 	gtkcolorscale.c		\
+	gtkcolorsel.c		\
+	gtkcolorseldialog.c	\
 	gtkcolorswatch.c	\
 	gtkcolorutils.c		\
 	gtkcombobox.c		\
@@ -580,6 +583,7 @@ gtk_base_c_sources = 		\
 	gtkgrid.c		\
 	gtkheaderbar.c		\
 	gtkhsla.c		\
+	gtkhsv.c		\
 	gtkicon.c		\
 	gtkiconcache.c		\
 	gtkiconcachevalidator.c	\

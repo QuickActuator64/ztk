@@ -56,7 +56,7 @@
 #include "gtkmenuitem.h"
 #include "gtkmain.h"
 #include "gtksettings.h"
-#include "gtkstock.h"
+#include "deprecated/gtkstock.h"
 #include "gtkaccessible.h"
 #include "gtksizerequest.h"
 #include "gtkseparator.h"
@@ -66,7 +66,7 @@
 
 /**
  * SECTION:gtkcolorsel
- * @Short_description: Deprecated widget used to select a color
+ * @Short_description: Widget used to select a color
  * @Title: GtkColorSelection
  *
  * The #GtkColorSelection is a widget that is used to select
@@ -338,8 +338,6 @@ gtk_color_selection_class_init (GtkColorSelectionClass *klass)
    * GtkColorSelection:current-color:
    *
    * The current GdkColor color.
-   *
-   * Deprecated: 3.4: Use #GtkColorSelection:current-rgba instead.
    */
   g_object_class_install_property (gobject_class,
                                    PROP_CURRENT_COLOR,
@@ -2488,8 +2486,6 @@ gtk_color_selection_set_has_palette (GtkColorSelection *colorsel,
  *
  * The first time this is called, it will also set
  * the original color to be @color too.
- *
- * Deprecated: 3.4: Use gtk_color_selection_set_current_rgba() instead.
  */
 void
 gtk_color_selection_set_current_color (GtkColorSelection *colorsel,
@@ -2558,8 +2554,6 @@ gtk_color_selection_set_current_alpha (GtkColorSelection *colorsel,
  * @color: (out): a #GdkColor to fill in with the current color
  *
  * Sets @color to be the current color in the GtkColorSelection widget.
- *
- * Deprecated: 3.4: Use gtk_color_selection_get_current_rgba() instead.
  */
 void
 gtk_color_selection_get_current_color (GtkColorSelection *colorsel,
@@ -2606,8 +2600,6 @@ gtk_color_selection_get_current_alpha (GtkColorSelection *colorsel)
  * as it might seem confusing to have that color change.
  * Calling gtk_color_selection_set_current_color() will also
  * set this color the first time it is called.
- *
- * Deprecated: 3.4: Use gtk_color_selection_set_previous_rgba() instead.
  */
 void
 gtk_color_selection_set_previous_color (GtkColorSelection *colorsel,
@@ -2667,8 +2659,6 @@ gtk_color_selection_set_previous_alpha (GtkColorSelection *colorsel,
  * @color: (out): a #GdkColor to fill in with the original color value
  *
  * Fills @color in with the original color value.
- *
- * Deprecated: 3.4: Use gtk_color_selection_get_previous_rgba() instead.
  */
 void
 gtk_color_selection_get_previous_color (GtkColorSelection *colorsel,

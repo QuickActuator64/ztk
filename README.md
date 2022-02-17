@@ -10,7 +10,7 @@ Future goals
 ------------
 
 - [x] Reimplement type-ahead into the file chooser
-- [ ] Reimplement the color wheel as a color-chooser (as found in older versions of GTK)
+- [x] Reimplement the color wheel as a color-chooser (as found in older versions of GTK)
 - [ ] Make compatible with GTK 4 applications
 - [ ] Make compatible with libhandy-1.0
 - [ ] Make compatible with libadwaita
