@@ -30,14 +30,14 @@
 #include "gtkcolorseldialog.h"
 #include "gtkframe.h"
 #include "gtkbutton.h"
-#include "gtkstock.h"
+#include "deprecated/gtkstock.h"
 #include "gtkintl.h"
 #include "gtkbuildable.h"
 
 
 /**
  * SECTION:gtkcolorseldlg
- * @Short_description: Deprecated dialog box for selecting a color
+ * @Short_description: Dialog box for selecting a color
  * @Title: GtkColorSelectionDialog
  *
  * The #GtkColorSelectionDialog provides a standard dialog which

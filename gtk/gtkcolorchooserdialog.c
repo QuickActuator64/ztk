@@ -51,7 +51,8 @@ enum
   PROP_ZERO,
   PROP_RGBA,
   PROP_USE_ALPHA,
-  PROP_SHOW_EDITOR
+  PROP_SHOW_EDITOR,
+  PROP_USE_COLORWHEEL
 };
 
 static void gtk_color_chooser_dialog_iface_init (GtkColorChooserInterface *iface);
@@ -158,6 +159,13 @@ gtk_color_chooser_dialog_get_property (GObject    *object,
         g_value_set_boolean (value, show_editor);
       }
       break;
+    case PROP_USE_COLORWHEEL:
+      {
+        gboolean use_colorwheel;
+        g_object_get (cd->priv->chooser, "use-colorwheel", &use_colorwheel, NULL);
+        g_value_set_boolean (value, use_colorwheel);
+      }
+      break;
     default:
       G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
       break;
@@ -190,6 +198,11 @@ gtk_color_chooser_dialog_set_property (GObject      *object,
                     "show-editor", g_value_get_boolean (value),
                     NULL);
       break;
+    case PROP_USE_COLORWHEEL:
+      g_object_set (cd->priv->chooser,
+                    "use-colorwheel", g_value_get_boolean (value),
+                    NULL);
+      break;
     default:
       G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
       break;
@@ -212,6 +225,9 @@ gtk_color_chooser_dialog_class_init (GtkColorChooserDialogClass *class)
   g_object_class_install_property (object_class, PROP_SHOW_EDITOR,
       g_param_spec_boolean ("show-editor", P_("Show editor"), P_("Show editor"),
                             FALSE, GTK_PARAM_READWRITE));
+  g_object_class_install_property (object_class, PROP_USE_COLORWHEEL,
+      g_param_spec_boolean ("use-colorwheel", P_("Use colorwheel"), P_("Use colorwheel"),
+                            TRUE, GTK_PARAM_READWRITE));
 
   /* Bind class to template
    */
